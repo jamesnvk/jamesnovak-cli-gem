@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/train_hard'
+require "bundler/setup"
+require "train_hard"
 
 TrainHard::CLI.new.start
