@@ -1,6 +1,6 @@
+# Model
 class TrainHard::Muscle
-  attr_accessor :name
-  attr_reader :exercises
+  attr_accessor :name, :exercises
 
   @@all = []
 
@@ -14,18 +14,16 @@ class TrainHard::Muscle
     @@all
   end
 
-  def make_muscle#(array from scraper)
-   # code here
+  def self.make_muscle_from_index
+    array = TrainHard::Scraper.scrape_muscles_index
     array.each do |muscle|
       TrainHard::Muscle.new(muscle)
     end
   end
-
   
-  def self.list_muscle#(array)
-    array.each_with_index {|item, index| puts "#{index + 1}. #{item.name}"}
+  def self.list_muscle
+    @@all.each_with_index {|item, index| puts "#{index + 1}. #{item.name}"}
   end
-
 
 
 

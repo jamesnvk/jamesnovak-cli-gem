@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-require './lib/train_hard'
-
-TrainHard::CLI.new.start
