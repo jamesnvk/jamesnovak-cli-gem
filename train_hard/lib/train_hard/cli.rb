@@ -1,8 +1,8 @@
-# CLI Controller
 class TrainHard::CLI
 
   def initialize
     TrainHard::Muscle.make_muscle_from_index
+    TrainHard::Muscle.add_exercises
   end
 
   def start
@@ -11,7 +11,7 @@ class TrainHard::CLI
   end
 
   def display_menu
-    puts "Which muscle group are you training today?:"
+    puts "Which muscle group are you training today? (enter number):"
     TrainHard::Muscle.list_muscle
   end
 
@@ -23,25 +23,28 @@ class TrainHard::CLI
       case input
       when "1"
         puts "Exercises for #{TrainHard::Muscle.all[0].name}:"
-        puts "Exercises here"
+        TrainHard::Muscle.all[0].exercises.each {|e| puts e.inspect}
       when "2"
         puts "Exercises for #{TrainHard::Muscle.all[1].name}:"
-        puts "Exercises here"
+        TrainHard::Muscle.all[1].exercises.each {|e| puts e.inspect}
       when "3"
         puts "Exercises for #{TrainHard::Muscle.all[2].name}:"
-        puts "Exercises here"
+        TrainHard::Muscle.all[2].exercises.each {|e| puts e.inspect}
       when "4"
         puts "Exercises for #{TrainHard::Muscle.all[3].name}:"
-        puts "Exercises here"
+        TrainHard::Muscle.all[3].exercises.each {|e| puts e.inspect}
       when "5"
         puts "Exercises for #{TrainHard::Muscle.all[4].name}:"
-        puts "Exercises here"
+        TrainHard::Muscle.all[4].exercises.each {|e| puts e.inspect}
       when "6"
         puts "Exercises for #{TrainHard::Muscle.all[5].name}:"
-        puts "Exercises here"
+        TrainHard::Muscle.all[5].exercises.each {|e| puts e.inspect}
       when "7"
         puts "Exercises for #{TrainHard::Muscle.all[6].name}:"
-        puts "Exercises here"
+        TrainHard::Muscle.all[6].exercises.each {|e| puts e.inspect}
+      when "8"
+        puts "Exercises for #{TrainHard::Muscle.all[7].name}:"
+        TrainHard::Muscle.all[7].exercises.each {|e| puts e.inspect}
       when "menu"
         display_menu
       else
