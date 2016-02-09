@@ -2,12 +2,13 @@ class TrainHard::CLI
 
   def initialize
     TrainHard::Muscle.make_muscle_from_index
-    TrainHard::Muscle.add_exercises
+    TrainHard::Muscle.make_and_add_exercises
   end
 
   def start
     display_menu
     pick
+    go_back
   end
 
   def display_menu
@@ -51,6 +52,12 @@ class TrainHard::CLI
         puts "Not sure what you meant.. type menu or exit" if input != "exit"
       end
     end
+  end
+
+  def go_back
+    puts "Type menu if you would like to see more, or any key to quit"
+    input = gets.strip
+    input == "menu" ? start : exit
   end
 
 end

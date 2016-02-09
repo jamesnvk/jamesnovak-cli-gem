@@ -11,4 +11,5 @@ require "train_hard"
 # Pry.start
 
 require "irb"
-IRB.start
+require "pry"
+Pry.start
