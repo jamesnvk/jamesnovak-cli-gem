@@ -9,6 +9,4 @@ class TrainHard::Exercise
     @@all << self
   end
 
-
-
 end

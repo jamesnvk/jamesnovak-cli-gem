@@ -34,8 +34,4 @@ class TrainHard::Muscle
     @@all[6].exercises = SCRAPED_EXERCISES[6].each {|exercise| TrainHard::Exercise.new(exercise, @@all[6])}
     @@all[7].exercises = SCRAPED_EXERCISES[7].each {|exercise| TrainHard::Exercise.new(exercise, @@all[7])}
   end
-
-
-
-
 end 

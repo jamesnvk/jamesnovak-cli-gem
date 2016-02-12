@@ -25,27 +25,35 @@ class TrainHard::CLI
       when "1"
         puts "Exercises for #{TrainHard::Muscle.all[0].name}:"
         TrainHard::Muscle.all[0].exercises.each {|e| puts e.inspect}
+        go_back
       when "2"
         puts "Exercises for #{TrainHard::Muscle.all[1].name}:"
         TrainHard::Muscle.all[1].exercises.each {|e| puts e.inspect}
+        go_back
       when "3"
         puts "Exercises for #{TrainHard::Muscle.all[2].name}:"
         TrainHard::Muscle.all[2].exercises.each {|e| puts e.inspect}
+        go_back
       when "4"
         puts "Exercises for #{TrainHard::Muscle.all[3].name}:"
         TrainHard::Muscle.all[3].exercises.each {|e| puts e.inspect}
+        go_back
       when "5"
         puts "Exercises for #{TrainHard::Muscle.all[4].name}:"
         TrainHard::Muscle.all[4].exercises.each {|e| puts e.inspect}
+        go_back
       when "6"
         puts "Exercises for #{TrainHard::Muscle.all[5].name}:"
         TrainHard::Muscle.all[5].exercises.each {|e| puts e.inspect}
+        go_back
       when "7"
         puts "Exercises for #{TrainHard::Muscle.all[6].name}:"
         TrainHard::Muscle.all[6].exercises.each {|e| puts e.inspect}
+        go_back
       when "8"
         puts "Exercises for #{TrainHard::Muscle.all[7].name}:"
         TrainHard::Muscle.all[7].exercises.each {|e| puts e.inspect}
+        go_back
       when "menu"
         display_menu
       else
